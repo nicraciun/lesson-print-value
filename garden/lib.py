@@ -44,6 +44,7 @@ def planted(action, garden2d, budget, pl):
             budget -= pl
         render(garden2d,budget)
         return budget
+    
 def watering(action, garden2d, budget, wr):
     if action  == 2:
         idx = int(input("Where: "))
@@ -93,6 +94,7 @@ def collect(action, garden2d, budget, cl):
                 note = 2
                 break
     return note, budget 
+
 def cutting(action, garden2d, bd):
     if action  == 4:
         idx = int(input("Where: "))
@@ -105,7 +107,7 @@ def cutting(action, garden2d, bd):
             if  garden2d[ground][idx] =='🌱':
                 garden2d[ground][idx] = '🌰'
             garden2d[ir][idx] = '⛅' 
-        render(garden2d,bd) 
+        render(garden2d,bd)
         
                         
         
